@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+(function () {
+    var Class = System.getModule("com.vmware.pscoe.library.class").Class();
+    
+    var CMDBServiceBase = Class.load("com.vmware.coe.hackathon.cmdb", "CMDBServiceBase");
+
+    return Class.define(function KangarooCMDBService() {
+            this.addRecord = function(name) {
+                //todo
+            }
+
+            this.deleteRecord = function(name) {
+                //todo
+            }
+
+        }
+    }, null, GreetingServiceBase);
+})
