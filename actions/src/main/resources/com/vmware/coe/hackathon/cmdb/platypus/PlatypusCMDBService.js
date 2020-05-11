@@ -18,7 +18,7 @@
 
             var id = response.id;
 
-            this.commitTransaction(id);
+            commitTransaction(id);
         }
 
         this.deleteRecord = function(id) {
@@ -31,10 +31,10 @@
 
             var id = response.id;
 
-            this.commitTransaction(id);
+            commitTransaction(id);
         }
 
-        this.commitTransaction(id) {
+        this.commitTransaction = function(id) {
             this.restPost(
                 "api/transaction/commit",
                 {
