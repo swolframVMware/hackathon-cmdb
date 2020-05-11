@@ -14,10 +14,16 @@
   <packaging>package</packaging>
   <dependencies>
     <dependency>
-            <groupId>com.vmware.pscoe.library</groupId>
-            <artifactId>class</artifactId>
-            <version>2.4.7</version>
-            <type>package</type>
-        </dependency>
+      <groupId>com.vmware.pscoe.library</groupId>
+      <artifactId>class</artifactId>
+      <version>2.4.7</version>
+      <type>package</type>
+    </dependency>
+    <dependency>
+      <groupId>com.vmware.pscoe.library</groupId>
+      <artifactId>rest-template</artifactId>
+      <version>2.5.7</version>
+      <type>package</type>
+    </dependency>
   </dependencies>
 </project>
