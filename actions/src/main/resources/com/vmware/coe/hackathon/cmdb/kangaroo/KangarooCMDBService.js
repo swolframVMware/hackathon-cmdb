@@ -4,17 +4,23 @@
 (function () {
     var Class = System.getModule("com.vmware.pscoe.library.class").Class();
     
-    var CMDBServiceBase = Class.load("com.vmware.coe.hackathon.cmdb", "CMDBServiceBase");
+    var CMDBServiceBase = Class.load("com.vmware.coe.hackathon.cmdb", "CMDBServiceRESTBase");
 
     return Class.define(function KangarooCMDBService() {
-            this.addRecord = function(name) {
-                //todo
-            }
+        this.addRecord = function(name, size) {
+            var response = this.restPost(
+                "api/record",
+                {
+                    "name": name,
+                    "size": size
+                }
+            )
 
-            this.deleteRecord = function(name) {
-                //todo
-            }
-
+            return response.id;
         }
-    }, null, GreetingServiceBase);
+
+        this.deleteRecord = function(id) {
+            this.restDELETE("api/record/" +  id);
+        }
+    }, null, GreetingServiceRESTBase);
 })
