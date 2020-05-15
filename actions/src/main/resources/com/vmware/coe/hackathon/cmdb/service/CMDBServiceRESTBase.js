@@ -26,6 +26,5 @@
         this.restDELETE = function() {
             restClient.delete(urlTemplateWithParams, ["my value1", "my value2"], { "vmName" : vm.name, "clusterName" : cluster.name } );
         }
-
     }, null, CMDBServiceBase);
 });

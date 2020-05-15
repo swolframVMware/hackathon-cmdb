@@ -21,7 +21,7 @@ System.getModule("com.vmware.coe.hackathon.cmdb").DeleteRecord(cmdb_name,cmdb_re
     </in-binding>
     <out-binding/>
     <description><![CDATA[Add a note to the workflow schema.]]></description>
-    <position y="60.0" x="167.0"/>
+    <position y="60.0" x="170.0"/>
   </workflow-item>
   <presentation/>
 </workflow>

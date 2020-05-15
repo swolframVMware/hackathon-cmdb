@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
-<properties>
-<comment>Exported from PSCoE o11n-convert</comment>
-<entry key="categoryPath">com.vmware.coe.hackathon.cmdb</entry>
-<entry key="name">AddRecord</entry>
-<entry key="type">ScriptModule</entry>
-<entry key="id">0d1edeaf-afaf-3558-8641-09d1350760f8</entry>
-</properties>

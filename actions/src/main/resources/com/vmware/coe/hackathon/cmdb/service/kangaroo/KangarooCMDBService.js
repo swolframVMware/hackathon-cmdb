@@ -8,6 +8,7 @@
 
     return Class.define(function KangarooCMDBService() {
         this.addRecord = function(name, size) {
+            /**
             var response = this.restPost(
                 "api/record",
                 {
@@ -17,10 +18,13 @@
             )
 
             return response.id;
+             */
+
+             System.log("DID THIS")
         }
 
         this.deleteRecord = function(id) {
-            this.restDELETE("api/record/" +  id);
+            //this.restDELETE("api/record/" +  id);
         }
     }, null, CMDBServiceRESTBase);
 })
