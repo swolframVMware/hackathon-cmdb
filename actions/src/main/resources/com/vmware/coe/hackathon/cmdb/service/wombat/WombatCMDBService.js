@@ -4,7 +4,7 @@
 (function () {
     var Class = System.getModule("com.vmware.pscoe.library.class").Class();
     
-    var CMDBServiceRESTBase = Class.load("com.vmware.coe.hackathon.cmdb", "CMDBServiceRESTBase");
+    var CMDBServiceRESTBase = Class.load("com.vmware.coe.hackathon.cmdb.service", "CMDBServiceRESTBase");
 
     return Class.define(function WombatCMDBService() {
         var apiVersion = "v1";

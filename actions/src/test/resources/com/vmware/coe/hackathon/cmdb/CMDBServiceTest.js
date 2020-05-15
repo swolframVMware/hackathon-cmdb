@@ -1,6 +1,6 @@
 describe("CMDB Service Test", function() {
     var Class = System.getModule("com.vmware.pscoe.library.class").Class();
-    var CMDBServiceFactory = Class.load("com.vmware.coe.hackathon.cmdb", "CMDBServiceFactory");
+    var CMDBServiceFactory = Class.load("com.vmware.coe.hackathon.cmdb.service", "CMDBServiceFactory");
 
     it("Kangaroo Test", function() {
         var cmdbServiceFactory = new CMDBServiceFactory();

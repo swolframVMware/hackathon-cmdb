@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<workflow xmlns="http://vmware.com/vco/workflow" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://vmware.com/vco/workflow http://vmware.com/vco/workflow/Workflow-v4.xsd" root-name="item1" object-name="workflow:name=generic" id="e0a822c8-6823-4d91-b914-37119f2246c9" version="0.0.0" api-version="6.0.0" allowed-operations="evf" restartMode="1" resumeFromFailedMode="0">
+  <display-name><![CDATA[Delete CMDB Record]]></display-name>
+  <position y="50.0" x="100.0"/>
+  <input>
+    <param name="cmdb_name" type="string"/>
+    <param name="cmdb_record_id" type="string"/>
+  </input>
+  <workflow-item name="item0" type="end" end-mode="0">
+    <in-binding/>
+    <position y="50.0" x="320.0"/>
+  </workflow-item>
+  <workflow-item name="item1" out-name="item0" type="task" script-module="com.vmware.coe.hackathon.cmdb/DeleteRecord">
+    <display-name><![CDATA[Action element]]></display-name>
+    <script encoded="false"><![CDATA[//Auto generated script, cannot be modified !
+System.getModule("com.vmware.coe.hackathon.cmdb").DeleteRecord(cmdb_name,cmdb_record_id);
+]]></script>
+    <in-binding>
+      <bind name="cmdb_name" type="string" export-name="cmdb_name"/>
+      <bind name="cmdb_record_id" type="string" export-name="cmdb_record_id"/>
+    </in-binding>
+    <out-binding/>
+    <description><![CDATA[Add a note to the workflow schema.]]></description>
+    <position y="60.0" x="167.0"/>
+  </workflow-item>
+  <presentation/>
+</workflow>

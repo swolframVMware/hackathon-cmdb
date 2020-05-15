@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dunes-script-module name="AddRecord" result-type="string" api-version="6.0.0" id="0d1edeaf-afaf-3558-8641-09d1350760f8" version="1.0.0" allowed-operations="evf">
+  <param n="cmdb_name" t="string"/>
+  <param n="cmdb_record_name" t="string"/>
+  <param n="cmdb_record_size" t="number"/>
+  <script encoded="false"><![CDATA[var Class = System.getModule("com.vmware.pscoe.library.class").Class();
+
+var CMDBServiceFactory = Class.load("com.vmware.coe.hackathon.cmdb", "CMDBServiceFactory");
+
+var cmdbServiceFactory = new CMDBServiceFactory();
+var cmdbService = cmdbServiceFactory.getService(cmdb);
+
+return cmdbService.addRecord(cmdb_name, cmdb_record_name, cmdb_record_size);
+]]></script>
+</dunes-script-module>

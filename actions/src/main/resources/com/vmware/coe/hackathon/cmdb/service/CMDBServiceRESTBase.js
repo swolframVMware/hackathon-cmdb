@@ -4,7 +4,7 @@
  */
 (function () {
     var Class = System.getModule("com.vmware.pscoe.library.class").Class();
-    var CMDBServiceBase = Class.load("com.vmware.coe.hackathon.cmdb", "CMDBServiceBase");    
+    var CMDBServiceBase = Class.load("com.vmware.coe.hackathon.cmdb.service", "CMDBServiceBase");    
 
     var RestHostFactory = System.getModule("com.vmware.pscoe.library.rest").RestHostFactory();
 

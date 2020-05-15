@@ -2,8 +2,8 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment>Exported from PSCoE o11n-convert</comment>
-<entry key="categoryPath">vmware.coe.hackathon.cmdb</entry>
-<entry key="name">Install</entry>
+<entry key="categoryPath">web-root</entry>
+<entry key="name">Add CMDB Record</entry>
 <entry key="type">Workflow</entry>
-<entry key="id">5541211795829378234967908345654834235</entry>
+<entry key="id">18642419-582b-4b1a-9bc5-d5e72ada5c78</entry>
 </properties>

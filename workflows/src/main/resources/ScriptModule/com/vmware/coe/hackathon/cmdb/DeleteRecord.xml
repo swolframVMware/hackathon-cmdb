@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dunes-script-module name="DeleteRecord" result-type="void" api-version="6.0.0" id="f5ce888a-faff-38c9-a3cc-4da823ec3147" version="1.0.0" allowed-operations="evf">
+  <param n="cmdb_name" t="string"/>
+  <param n="cmdb_record_id" t="string"/>
+  <script encoded="false"><![CDATA[var Class = System.getModule("com.vmware.pscoe.library.class").Class();
+
+var CMDBServiceFactory = Class.load("com.vmware.coe.hackathon.cmdb", "CMDBServiceFactory");
+
+var cmdbServiceFactory = new CMDBServiceFactory();
+var cmdbService = cmdbServiceFactory.getService(cmdb);
+
+cmdbService.deleteRecord(cmdb_name, cmdb_record_id);
+]]></script>
+</dunes-script-module>
