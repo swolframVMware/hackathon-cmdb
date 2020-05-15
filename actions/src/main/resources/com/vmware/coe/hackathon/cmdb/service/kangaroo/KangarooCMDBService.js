@@ -3,30 +3,32 @@
  */
 (function () {
     var Class = System.getModule("com.vmware.pscoe.library.class").Class();
-    
-    var CMDBServiceRESTBase = Class.load("com.vmware.coe.hackathon.cmdb.service", "CMDBServiceRESTBase");
+    var CMDBServiceBase = Class.load("com.vmware.coe.hackathon.cmdb.service", "CMDBServiceBase");
+
+    var RestClient = System.getModule("com.vmware.pscoe.library.rest").RestClient();
+    var restClient = new RestClient(null);  
 
     return Class.define(function KangarooCMDBService(configName) {
-        CMDBServiceRESTBase.call(this, configName);
-        
+        CMDBServiceBase.call(this, configName);
+
         this.addRecord = function(name, size) {
-            /**
-            var response = this.restPost(
+             response = restClient.put(
                 "api/record",
+                null,
                 {
                     "name": name,
                     "size": size
                 }
-            )
-
-            return response.id;
-             */
-
-             System.log("DID THIS")
+            );   
         }
 
         this.deleteRecord = function(id) {
-            //this.restDELETE("api/record/" +  id);
+           restClient.delete(
+               "api/record/{id}",
+               [id],
+               null
+            );
         }
-    }, null, CMDBServiceRESTBase);
+        
+    }, null, CMDBServiceBase);
 })

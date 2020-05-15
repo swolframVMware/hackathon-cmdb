@@ -3,47 +3,50 @@
  */
 (function () {
     var Class = System.getModule("com.vmware.pscoe.library.class").Class();
-    
-    var CMDBServiceRESTBase = Class.load("com.vmware.coe.hackathon.cmdb.service", "CMDBServiceRESTBase");
+    var CMDBServiceBase = Class.load("com.vmware.coe.hackathon.cmdb.service", "CMDBServiceBase");
+
+    var RestClient = System.getModule("com.vmware.pscoe.library.rest").RestClient();
+    var restClient = new RestClient(null);    
 
     return Class.define(function PlatypusCMDBService(configName) {
-        CMDBServiceRESTBase.call(this, configName);
+        CMDBServiceBase.call(this, configName);
         
         this.addRecord = function(name, size) {
-            var response = this.restPost(
+            var response = restClient.post(
                 "api/transaction/create",
+                null,
                 {
                     "name": name,
                     "size": size
                 }
             )
 
-            var id = response.id;
+            var id = 1;
 
-            commitTransaction(id);
+            this.commitTransaction(id);
         }
 
         this.deleteRecord = function(id) {
-            var response = this.restPost(
+            var response = restClient.post(
                 "api/transaction/delete",
+                null,
                 {
-                    "id": id
+                    "transactionId": id
                 }
             )
 
-            var id = response.id;
-
-            commitTransaction(id);
+            this.commitTransaction(id);
         }
 
         this.commitTransaction = function(id) {
-            this.restPost(
+            var response = restClient.post(
                 "api/transaction/commit",
+                null,
                 {
                     "transactionId": id
                 }
             )
         }
 
-    }, null, CMDBServiceRESTBase);
+    }, null, CMDBServiceBase);
 })
