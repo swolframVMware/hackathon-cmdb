@@ -8,7 +8,7 @@ describe("CMDB Service Test", function() {
 
     it("Kangaroo Add Test", function() {
         var cmdbServiceFactory = new CMDBServiceFactory();
-        var cmdbService = cmdbServiceFactory.getService("kangaroo", "_mock");
+        var cmdbService = cmdbServiceFactory.getService("Kangaroo", "_mock");
 
         cmdbService.addRecord("name", 1);
         
@@ -17,7 +17,7 @@ describe("CMDB Service Test", function() {
 
     it("Kangaroo Delete Test", function() {
         var cmdbServiceFactory = new CMDBServiceFactory();
-        var cmdbService = cmdbServiceFactory.getService("kangaroo", "_mock");
+        var cmdbService = cmdbServiceFactory.getService("Kangaroo", "_mock");
 
         cmdbService.deleteRecord(1);
         
@@ -26,7 +26,7 @@ describe("CMDB Service Test", function() {
 
     it("Wombat Add Test", function() {
         var cmdbServiceFactory = new CMDBServiceFactory();
-        var cmdbService = cmdbServiceFactory.getService("wombat", "_mock");
+        var cmdbService = cmdbServiceFactory.getService("Wombat", "_mock");
 
         cmdbService.addRecord("name", 1);
 
@@ -35,7 +35,7 @@ describe("CMDB Service Test", function() {
 
     it("Wombat Delete Test", function() {
         var cmdbServiceFactory = new CMDBServiceFactory();
-        var cmdbService = cmdbServiceFactory.getService("wombat", "_mock");
+        var cmdbService = cmdbServiceFactory.getService("Wombat", "_mock");
 
         cmdbService.deleteRecord("name", 1);
 
@@ -44,7 +44,7 @@ describe("CMDB Service Test", function() {
 
     it("Platypus Add Test", function() {
         var cmdbServiceFactory = new CMDBServiceFactory();
-        var cmdbService = cmdbServiceFactory.getService("platypus", "_mock");
+        var cmdbService = cmdbServiceFactory.getService("Platypus", "_mock");
 
         cmdbService.addRecord("name", 1);
 
@@ -53,7 +53,7 @@ describe("CMDB Service Test", function() {
 
     it("Platypus Delete Test", function() {
         var cmdbServiceFactory = new CMDBServiceFactory();
-        var cmdbService = cmdbServiceFactory.getService("platypus", "_mock");
+        var cmdbService = cmdbServiceFactory.getService("Platypus", "_mock");
 
         cmdbService.addRecord("name", 1);
 
