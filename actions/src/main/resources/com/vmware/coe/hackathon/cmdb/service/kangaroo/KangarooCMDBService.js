@@ -6,7 +6,9 @@
     
     var CMDBServiceRESTBase = Class.load("com.vmware.coe.hackathon.cmdb.service", "CMDBServiceRESTBase");
 
-    return Class.define(function KangarooCMDBService() {
+    return Class.define(function KangarooCMDBService(configName) {
+        CMDBServiceRESTBase.call(this, configName);
+        
         this.addRecord = function(name, size) {
             /**
             var response = this.restPost(

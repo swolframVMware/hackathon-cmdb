@@ -4,7 +4,7 @@
 (function () {
     var Class = System.getModule("com.vmware.pscoe.library.class").Class();
 
-    Class.define(function CMDBServiceBase() {
+    return Class.define(function CMDBServiceBase(configName) {
         this.addRecord = function()  {
             throw "Not implemented"
         }

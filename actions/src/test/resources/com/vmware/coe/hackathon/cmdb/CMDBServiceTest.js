@@ -4,19 +4,19 @@ describe("CMDB Service Test", function() {
 
     it("Kangaroo Test", function() {
         var cmdbServiceFactory = new CMDBServiceFactory();
-        var cmdbService = cmdbServiceFactory.getService("kangaroo");
+        var cmdbService = cmdbServiceFactory.getService("kangaroo", "test");
         expect(true).toBe(true);
     });
 
     it("Wombat Test", function() {
         var cmdbServiceFactory = new CMDBServiceFactory();
-        var cmdbService = cmdbServiceFactory.getService("wombat");
+        var cmdbService = cmdbServiceFactory.getService("wombat", "test");
         expect(true).toBe(true);
     });
 
     it("Platypus Test", function() {
         var cmdbServiceFactory = new CMDBServiceFactory();
-        var cmdbService = cmdbServiceFactory.getService("platypus");
+        var cmdbService = cmdbServiceFactory.getService("platypus", "test");
         expect(true).toBe(true);
     });
  })

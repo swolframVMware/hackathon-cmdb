@@ -6,14 +6,14 @@
     var PlatypusCMDBService = Class.load("com.vmware.coe.hackathon.cmdb.service.platypus", "PlatypusCMDBService");
 
     return Class.define(function CMDBServiceFactory() {
-        this.getService = function(cmdb) {
+        this.getService = function(cmdb, configName) {
             switch (cmdb.toLowerCase()) {
                 case "kangaroo":
-                    return new KangarooCMDBService();
+                    return new KangarooCMDBService(configName);
                 case "wombat":
-                    return new WombatCMDBService();
+                    return new WombatCMDBService(configName);
                 case "platypus":
-                    return new PlatypusCMDBService();
+                    return new PlatypusCMDBService(configName);
             }
         }
     })

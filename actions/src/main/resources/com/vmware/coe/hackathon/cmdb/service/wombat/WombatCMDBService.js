@@ -6,7 +6,9 @@
     
     var CMDBServiceRESTBase = Class.load("com.vmware.coe.hackathon.cmdb.service", "CMDBServiceRESTBase");
 
-    return Class.define(function WombatCMDBService() {
+    return Class.define(function WombatCMDBService(configName) {
+         CMDBServiceRESTBase.call(this, configName);
+
         var apiVersion = "v1";
 
         this.addRecord = function(name, size) {

@@ -12,7 +12,7 @@
     var CMDBServiceFactory = Class.load("com.vmware.coe.hackathon.cmdb.service", "CMDBServiceFactory");
 
     var cmdbServiceFactory = new CMDBServiceFactory();
-    var cmdbService = cmdbServiceFactory.getService(cmdb_name);
+    var cmdbService = cmdbServiceFactory.getService(cmdb_name, "setconfigname");
 
     return cmdbService.addRecord(cmdb_name, cmdb_record_name, cmdb_record_size);
 })

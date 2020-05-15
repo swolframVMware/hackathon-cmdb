@@ -6,7 +6,9 @@
     
     var CMDBServiceRESTBase = Class.load("com.vmware.coe.hackathon.cmdb.service", "CMDBServiceRESTBase");
 
-    return Class.define(function PlatypusCMDBService() {
+    return Class.define(function PlatypusCMDBService(configName) {
+        CMDBServiceRESTBase.call(this, configName);
+        
         this.addRecord = function(name, size) {
             var response = this.restPost(
                 "api/transaction/create",

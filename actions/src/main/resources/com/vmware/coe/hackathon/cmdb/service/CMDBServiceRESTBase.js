@@ -8,7 +8,8 @@
 
     var RestHostFactory = System.getModule("com.vmware.pscoe.library.rest").RestHostFactory();
 
-    Class.define(function CMDBServiceRESTBase() {
+    return Class.define(function CMDBServiceRESTBase(configName) {
+        CMDBServiceBase.call(this, configName);
         var restClient = RestHostFactory.newHostWithBasicAuth(endpointUrl, endpointName, username, password);
 
         this.addRecord = function()  {
