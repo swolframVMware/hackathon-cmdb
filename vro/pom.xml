@@ -16,7 +16,7 @@
     </parent>
 
     <groupId>com.vmware.coe.hackathon</groupId>
-    <artifactId>cmdb-all</artifactId>
+    <artifactId>cmdb-vro</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 

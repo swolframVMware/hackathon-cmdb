@@ -10,7 +10,7 @@
         <version>2.5.10</version>
     </parent>
     <groupId>com.vmware.coe.hackathon</groupId>
-    <artifactId>cmdb</artifactId>
+    <artifactId>cmdb-vra</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>vra-ng</packaging>
     <properties>
